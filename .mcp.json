@@ -2,7 +2,8 @@
   "mcpServers": {
     "corvi": {
       "command": "${user_config.corvi_binary}",
-      "args": ["mcp-serve"]
+      "args": ["mcp-serve"],
+      "env": { "CORVI_MCP_ALLOW_CREATE": "${user_config.allow_create_plan}" }
     }
   }
 }

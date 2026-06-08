@@ -12,6 +12,12 @@
       "title": "Corvi binary path",
       "description": "Path to the corvi CLI bundled inside Corvi.app. Change this if Corvi.app is not in /Applications.",
       "default": "/Applications/Corvi.app/Contents/Resources/corvi"
+    },
+    "allow_create_plan": {
+      "type": "string",
+      "title": "Allow agent-generated plans (paid)",
+      "description": "Set to \"1\" to expose the create_plan tool, letting the agent generate a Quick Plan on demand. This spends a paid LLM call (~$0.01–0.05 each). Leave at \"0\" to stay read-only.",
+      "default": "0"
     }
   }
 }
