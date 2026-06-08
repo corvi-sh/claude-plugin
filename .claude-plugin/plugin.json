@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin.json",
+  "name": "corvi",
+  "version": "0.1.0",
+  "description": "Read, dispatch, and verify Corvi's code-grounded implementation plans from your agent.",
+  "author": { "name": "Corvi", "url": "https://corvi.sh" },
+  "homepage": "https://corvi.sh",
+  "keywords": ["planning", "mcp", "corvi", "implementation-plan"],
+  "userConfig": {
+    "corvi_binary": {
+      "type": "file",
+      "title": "Corvi binary path",
+      "description": "Path to the corvi CLI bundled inside Corvi.app. Change this if Corvi.app is not in /Applications.",
+      "default": "/Applications/Corvi.app/Contents/Resources/corvi"
+    }
+  }
+}

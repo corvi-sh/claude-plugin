@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "corvi",
+  "owner": { "name": "Corvi", "url": "https://corvi.sh" },
+  "metadata": {
+    "description": "Corvi's official Claude Code plugin — read, dispatch, and verify code-grounded implementation plans."
+  },
+  "plugins": [
+    {
+      "name": "corvi",
+      "source": "./",
+      "description": "Read, dispatch, and verify Corvi's code-grounded implementation plans from your agent."
+    }
+  ]
+}

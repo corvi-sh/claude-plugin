@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "corvi": {
+      "command": "${user_config.corvi_binary}",
+      "args": ["mcp-serve"]
+    }
+  }
+}
