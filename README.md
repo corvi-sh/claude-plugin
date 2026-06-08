@@ -30,9 +30,9 @@ A `corvi` MCP server (stdio) exposing your plan library:
 | `get_plan_todos` | The actionable checklist (files + acceptance per todo) |
 | `plan_dispatch` | Pending todos as ordered, file-disjoint parallel-safe waves |
 | `plan_verify` | Structurally check a `git diff --name-only` against the plan |
-| `create_plan`† | Generate a NEW Quick Plan on demand and save it (opt-in, paid) |
+| `create_plan`† | Generate a NEW Quick Plan on demand and save it (paid) |
 
-† **`create_plan` is off by default.** Set the plugin's **`allow_create_plan`** config to `"1"` to expose it — it lets the agent generate a code-grounded Quick Plan (single pass, ≤60s) by spending a paid LLM call (~$0.01–0.05). Left at `"0"`, the plugin is purely read-only and never spends.
+† **`create_plan` generates a code-grounded Quick Plan** (single pass, ≤60s) by spending a paid LLM call (~$0.01–0.05) on your configured key. It's **on by default** — your agent still prompts before each tool call, so nothing runs without your say-so. To make the plugin strictly read-only (e.g. headless/auto-approve setups), set the plugin's **`allow_create_plan`** config to `"0"`.
 
 Plus a **`plan-with-corvi` skill** (drives the read → dispatch → implement → verify loop) and a **`/corvi [query]`** command to start from a plan.
 

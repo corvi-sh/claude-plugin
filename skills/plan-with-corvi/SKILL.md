@@ -17,7 +17,7 @@ Plans are **authored in the Corvi app** (this plugin is read-only). Tool results
 - `get_plan_todos { id }` — the actionable checklist: each todo's id, title, done, **files**, acceptance.
 - `plan_dispatch { id }` — decomposes pending todos into **ordered, parallel-safe waves** by file-disjointness (todos in a wave share no files → safe to run concurrently; waves run in index order).
 - `plan_verify { id, paths }` — structurally checks changed files against pending todos. Pass `paths` = `git diff --name-only` output (repo-relative).
-- `create_plan { task, workspace }` — **opt-in, paid.** Only present when the user enabled it (`allow_create_plan` = `1`). Generates a NEW code-grounded Quick Plan (single pass, ≤60s) for `task` in the repo at `workspace`, saves it, and returns its id + parsed todos. Then read/dispatch it like any other plan. Don't call it speculatively — it spends a paid LLM call; prefer an existing plan, and confirm with the user before generating.
+- `create_plan { task, workspace }` — **paid** (present by default; absent if the user set `allow_create_plan` = `0`). Generates a NEW code-grounded Quick Plan (single pass, ≤60s) for `task` in the repo at `workspace`, saves it, and returns its id + parsed todos. Then read/dispatch it like any other plan. Don't call it speculatively — it spends a paid LLM call; prefer an existing plan, and confirm with the user before generating.
 
 Plans are also exposed as resources at `corvi://plan/<id>`.
 

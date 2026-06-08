@@ -16,8 +16,8 @@
     "allow_create_plan": {
       "type": "string",
       "title": "Allow agent-generated plans (paid)",
-      "description": "Set to \"1\" to expose the create_plan tool, letting the agent generate a Quick Plan on demand. This spends a paid LLM call (~$0.01–0.05 each). Leave at \"0\" to stay read-only.",
-      "default": "0"
+      "description": "Whether the create_plan tool is exposed, letting the agent generate a Quick Plan on demand (a paid LLM call, ~$0.01–0.05 each; your agent still prompts before running it). On by default; set to \"0\" to make the plugin read-only.",
+      "default": "1"
     }
   }
 }
