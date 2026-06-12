@@ -2,7 +2,7 @@
 
 Connect your agent to [Corvi](https://corvi.sh)'s **code-grounded implementation plans**. Corvi drafts, reviews, and synthesizes a plan against your actual repo (multi-model) in the macOS app; this plugin lets Claude Code (or any MCP agent) **read, dispatch, and verify** those plans — Corvi is the planning backend, your agent does the work.
 
-Read-only: plans are authored in the Corvi app. (Agent-triggered plan generation is planned for a later release.)
+Reads are local and $0; `create_plan` (the one paid tool, on by default) generates a Quick Plan on demand — your agent prompts before any tool runs, and `allow_create_plan: "0"` makes the plugin strictly read-only.
 
 ## Prerequisites
 
